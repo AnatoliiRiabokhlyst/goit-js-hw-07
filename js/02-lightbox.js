@@ -11,10 +11,4 @@ const galleryRef = document.querySelector('.gallery');
 
 galleryRef.insertAdjacentHTML('beforeend', addHtml)
 
-function onClick (e) {
-    e.preventDefault();
-    let modal = new SimpleLightbox('.gallery__item', {captionsData:'alt', captionDelay:250});
-    modal.on('show.SimpleLightbox');
-}
-
-galleryRef.addEventListener('click', onClick);
+let modal = new SimpleLightbox('.gallery__item', {captionsData:'alt', captionDelay:250});
